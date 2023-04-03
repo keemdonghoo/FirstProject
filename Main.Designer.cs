@@ -1,4 +1,6 @@
-﻿namespace TeamProject
+﻿using System.Windows.Forms;
+
+namespace TeamProject
 {
     partial class Main
     {

@@ -11,18 +11,14 @@ namespace TeamProject
 {
     public partial class Main : Form
     {
-        const string strConn = "Server=127.0.0.1; Database=projectuserdb; uid=sa; pwd=1234; Encrypt=false";
-        SqlConnection conn;
-        SqlDataReader reader;
         private FlowLayoutPanel flowLayoutPanel;
-        
-        
         public Main()
         {
             InitializeComponent();
-<<<<<<< HEAD
+
+            LoginForm lg= new LoginForm();
+            lg.Show();
             LoadMovieDataAsync();
-            
         }
 
         private async void LoadMovieDataAsync()
@@ -50,7 +46,7 @@ namespace TeamProject
             string clientId = "FXqKsjIoNLVFmlkXvTzt";
             string clientSecret = "RZVA7QWEda";
 
-            string apiUrl = $"https://openapi.naver.com/v1/search/movie.json?query={Uri.EscapeDataString(title)}";
+            string apiUrl = $"https://openapi.naver.com/v1/search/movie.json?query={title}";
 
             using HttpClient client = new HttpClient();
             client.DefaultRequestHeaders.Add("X-Naver-Client-Id", clientId);
@@ -103,10 +99,6 @@ namespace TeamProject
 
             fLPMain.Controls.Add(panel);
 
-=======
->>>>>>> ebacd12060175c98eea815688146e314c33f9592
-            LoginForm lg= new LoginForm();
-            lg.Show();
         }
     }
 }
