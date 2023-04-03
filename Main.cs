@@ -8,7 +8,7 @@ using System;
 using Newtonsoft.Json.Linq;
 
 namespace TeamProject
-{
+{//쉽지않네ㅅㅂ
     public partial class Main : Form
     {
         private FlowLayoutPanel flowLayoutPanel;
